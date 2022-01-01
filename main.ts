@@ -218,6 +218,7 @@ basic.forever(function () {
 })
 // CarGame
 basic.forever(function () {
+    basic.pause(4800)
     while (BilSpill == 1) {
         Hinder = game.createSprite(randint(0, 4), 0)
         HinderReady = 1
@@ -271,6 +272,7 @@ basic.forever(function () {
         basic.showString("GO!")
         Bil = game.createSprite(2, 2)
         while (BilSpill == 1) {
+            Bil.set(LedSpriteProperty.Blink, 250)
             if (input.rotation(Rotation.Pitch) > 10) {
                 Bil.change(LedSpriteProperty.Y, 1)
                 basic.pause(200)
